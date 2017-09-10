@@ -1,4 +1,7 @@
 
+Libraries Required: numpy,matplotlib.pyplot
+
+
 The dataset
 
 <img class="alignnone size-full wp-image-280" src="https://theartofanalytics.files.wordpress.com/2017/09/birds-view1.png" alt="Bird's View" width="1366" height="671" />
