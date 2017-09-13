@@ -138,6 +138,24 @@ def main():
     ax.plot_surface(xx,yy,0.5, color='purple',alpha = 0.5)
 
     plt.show()
+    
+def ideal_situation():
+    X, Y = gendata()
+    fig = plt.figure()
+    ax = fig.gca(projection='3d')
+
+    colors = []
+    for i in range(len(Y.flatten())):
+        if Y.flatten()[i] >= 0.5:
+            colors.append('blue')
+        else:
+            colors.append('red')
+    
+    ax.scatter(X[:,0],X[:,1],Y.flatten(), color=colors)
+    xx, yy = np.meshgrid(np.array(list(range(9)))-4, np.array(list(range(9)))-4)
+    ax.plot_surface(xx,yy,0.5, color='purple',alpha = 0.5)
+
+    plt.show()
         
 if __name__ =="__main__":
     main()
